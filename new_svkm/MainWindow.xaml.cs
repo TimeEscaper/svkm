@@ -29,13 +29,17 @@ namespace new_svkm
         string token;
 
         string cache_path = Environment.CurrentDirectory + "\\temp\\cache";
-        string data_path = Environment.CurrentDirectory + "\\data";
+        //string data_path = Environment.CurrentDirectory + "\\data";
+        string data_path = Environment.ExpandEnvironmentVariables("%AppData%") + "Local\\svkm\\data";
 
         bool hastoken = false;
+
+        Dictionary<Int64, String> names;
 
         public MainWindow()
         {
             InitializeComponent();
+
 
             if (!Directory.Exists(cache_path))
                 Directory.CreateDirectory(cache_path);
@@ -43,7 +47,7 @@ namespace new_svkm
             if (!Directory.Exists(data_path))
                 Directory.CreateDirectory(data_path);
 
-            MessageBox.Show(Int64.MaxValue.ToString());
+      
 
         }
 
@@ -173,12 +177,19 @@ namespace new_svkm
             vbrowser.Visibility = System.Windows.Visibility.Hidden;
             setvisibility(System.Windows.Visibility.Visible);
 
+
             if(authorisation_ok)
             {
-                foreach(VkMessage n in Vk.GetDialogs(userid,token,200))
+                names = new Dictionary<Int64, String>();
+                List<VkMessage> dialogs = Vk.GetDialogs(userid, token, 200, true,names);
+
+                
+
+                foreach(VkMessage n in dialogs)
                 {
                     ListBoxItem item = new ListBoxItem();
                     
+
                     if(n.is_chat)
                     {
                         item.Content = n.title;
@@ -187,7 +198,7 @@ namespace new_svkm
                     }
                     else
                     {
-                        item.Content = n.user_id.ToString();
+                        item.Content = names[n.user_id];
                         item.Uid = n.user_id.ToString();
                         item.Tag = false;
                     }
@@ -299,12 +310,67 @@ namespace new_svkm
 
         }
 
-        private void dialog_list_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+
+        private void dialog_list_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ListBoxItem it = (ListBoxItem)dialog_list.SelectedItem;
-            MessageBox.Show(it.Uid.ToString());
-            it = null;
-            MessageBox.Show("dfs");
+
+            if (!(bool)it.Tag)
+            {
+                string friend_id = it.Uid;
+                it = null;
+                Show_Dialog(Vk.Dialog_History(friend_id, token, 200));
+            }
+            else
+            {
+                String chat_id = it.Uid;
+                it = null;
+                Show_Chat(Vk.Chat_History(chat_id, token, 200),chat_id);
+            }
+
+
         }
+
+        /*public void Show_Message(List<VkMessage> dialog)
+        {
+
+        }*/
+
+        private void Show_Dialog(List<VkMessage> dialog)
+        {
+            message_list.Items.Clear();
+            foreach(VkMessage msg in dialog)
+            {
+                ListBoxItem item = new ListBoxItem();
+
+                item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
+                item.Uid = msg.user_id.ToString();
+
+                message_list.Items.Add(item);
+
+                item = null;
+            }
+        }
+
+        private void Show_Chat(List<VkMessage> chat, String chat_id)
+        {
+            Vk.add_chat_names(chat_id, ref names, token);
+
+            message_list.Items.Clear();
+            foreach (VkMessage msg in chat)
+            {
+                ListBoxItem item = new ListBoxItem();
+
+                item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
+                item.Uid = msg.user_id.ToString();
+
+                message_list.Items.Add(item);
+
+                item = null;
+            }
+        }
+
+       
     }
 }

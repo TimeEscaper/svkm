@@ -11,17 +11,17 @@
     <Grid>
 
         <Border BorderBrush="#FF0C2B80" BorderThickness="2" HorizontalAlignment="Left" Height="489" VerticalAlignment="Top" Width="689" CornerRadius="0,0,10,10" Background="#FFF0F1FF">
-         
+
         </Border>
         <Button x:Name="button_close" Content="X" Margin="648,8,8,454" RenderTransformOrigin="2.735,-1.133" Background="{x:Null}" BorderThickness="0" FontWeight="Bold" FontSize="16" Click="button_close_Click" />
         <TextBox x:Name="type_form" HorizontalAlignment="Left" Height="83" Margin="228,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="451"/>
         <Button x:Name="button_send" Content="Отправить" HorizontalAlignment="Left" Margin="572,450,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.88,0.4" Height="29"/>
-        <ListBox x:Name="dialog_list" HorizontalAlignment="Left" Height="373" Margin="10,76,0,0" VerticalAlignment="Top" Width="199" MouseLeftButtonDown="dialog_list_MouseLeftButtonDown" />
+        <ListBox x:Name="dialog_list" HorizontalAlignment="Left" Height="373" Margin="10,76,0,0" VerticalAlignment="Top" Width="199" MouseDoubleClick="dialog_list_MouseDoubleClick" />
         <ListBox x:Name="message_list" HorizontalAlignment="Left" Height="272" Margin="228,76,0,0" VerticalAlignment="Top" Width="451"/>
         <Button x:Name="button_min" Content="-" HorizontalAlignment="Left" Margin="615,10,0,0" VerticalAlignment="Top" Width="29" Background="{x:Null}" BorderThickness="0" Height="23" FontWeight="Bold" FontSize="24" Click="button_min_Click" />
 
 
-        <awe:WebControl x:Name="vbrowser" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.9,1.14" Height="441" Width="669" AddressChanged="vbrowser_AddressChanged" DocumentReady="vbrowser_DocumentReady"  />
+        <awe:WebControl x:Name="vbrowser" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.9,1.14" Height="426" Width="669" AddressChanged="vbrowser_AddressChanged" DocumentReady="vbrowser_DocumentReady"  />
         <Label x:Name="title" Content="" HorizontalAlignment="Left" Margin="228,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.868,4.038" Width="344"/>
         <Label x:Name="user_name" Content="" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.947,0.423" Width="218"/>
 

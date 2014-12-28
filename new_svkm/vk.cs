@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using System.Text;
 using System.Windows;
 
 namespace new_svkm
@@ -41,18 +40,21 @@ namespace new_svkm
                  else
                  {
                      IsOut = true;
+                     user_id = Convert.ToInt64(n.SelectSingleNode("uid").InnerText);
                  }
 
                  if (n.SelectSingleNode("chat_id") != null)
                  {
-               
-                     title = n.SelectSingleNode("title").InnerText;
+                     if (n.SelectSingleNode("title") != null)
+                        title = n.SelectSingleNode("title").InnerText;
                      chat_id = Convert.ToInt32(n.SelectSingleNode("chat_id").InnerText);
                      is_chat = true;
+                     
                  }
                  else
                  {
                      is_chat = false;
+                  
                  }
 
                  body = n.SelectSingleNode("body").InnerText;
@@ -125,10 +127,26 @@ namespace new_svkm
 
                 case "users.get":
                     {
-                        res.Load("https://api.vk.com/method/users.get.xml?user_ids=" + par1 + "&fields=online&access_token=" + token);
+                        res.Load("https://api.vk.com/method/users.get.xml?user_ids=" + par1 + "&access_token=" + token);
+                        break;
+                    }
+
+                case "messages.getChat":
+                    {
+                        res.Load("https://api.vk.com/method/messages.getChat.xml?chat_id=" + par1 + "&access_token=" + token);
                         break;
                     }
             }
+
+            return res;
+        }
+
+        public static string get_name(int userid, String token)
+        {
+            string res;
+            XmlDocument data = VkAPI_Perform("users.get",userid.ToString(),token);
+
+            res = data.SelectSingleNode("/response/user/first_name") + " " + data.SelectSingleNode("/response/user/last_name");
 
             return res;
         }
@@ -151,12 +169,14 @@ namespace new_svkm
             return valid;
         }
 
-        public static List<VkMessage> GetDialogs(int userid, string token, int count)
+        public static List<VkMessage> GetDialogs(int userid, string token, int count, bool need_names, Dictionary<Int64,String> names)
         {
             List<VkMessage> res = new List<VkMessage>();
             XmlDocument dialogs = new XmlDocument();
             dialogs = VkAPI_Perform("messages.getDialogs", token, count.ToString());
+            dialogs.Save("data.xml");
 
+            string for_names = "";
 
             if (dialogs.SelectNodes("/response").Count != 0)
             {
@@ -165,6 +185,26 @@ namespace new_svkm
                     VkMessage msg = new VkMessage();
                     msg.FromXml(n);
                     res.Add(msg);
+
+                    if (need_names)
+                        for_names += n.SelectSingleNode("uid").InnerText + ",";
+
+                }
+
+                if(need_names)
+                {
+                    for_names.Remove(for_names.Length-1);
+
+                    XmlDocument name_list = VkAPI_Perform("users.get", token, for_names);
+                    
+                    foreach(XmlNode n in name_list.SelectNodes("/response/user"))
+                    {
+                        Int64 uid = Convert.ToInt64(n.SelectSingleNode("uid").InnerText);
+                        if(!names.ContainsKey(uid))
+                        {
+                            names.Add(uid, n.SelectSingleNode("first_name").InnerText + " " + n.SelectSingleNode("last_name").InnerText);
+                        }
+                    }
                 }
             }
 
@@ -174,8 +214,79 @@ namespace new_svkm
             }
 
 
-            MessageBox.Show(res.Count.ToString());
+            //MessageBox.Show(res.Count.ToString());
             return res;
         }
+
+        public static List<VkMessage> Dialog_History(String friend_id, String token, int count)
+        {
+            List<VkMessage> res = new List<VkMessage>();
+            XmlDocument dialog = new XmlDocument();
+            dialog.Load("https://api.vk.com/method/messages.getHistory.xml?user_id=" + friend_id + "&count=" + count.ToString() + "&access_token=" + token);
+
+
+            if(dialog.SelectNodes("/response/message").Count != 0)
+            {
+                foreach(XmlNode n in dialog.SelectNodes("/response/message"))
+                {
+                    VkMessage msg = new VkMessage();
+                    msg.FromXml(n);
+                    res.Add(msg);
+                    msg = null;
+                }
+            }
+
+            return res;
+        }
+
+        public static List<VkMessage> Chat_History(String chat_id, String token, int count)
+        {
+            List<VkMessage> res = new List<VkMessage>();
+            XmlDocument dialog = new XmlDocument();
+            dialog.Load("https://api.vk.com/method/messages.getHistory.xml?chat_id=" + chat_id + "&count=" + count.ToString() + "&access_token=" + token);
+
+            
+
+            if(dialog.SelectNodes("/response/message").Count != 0)
+            {
+                foreach(XmlNode n in dialog.SelectNodes("/response/message"))
+                {
+                    VkMessage msg = new VkMessage();
+                    msg.FromXml(n);
+                    res.Add(msg);
+                    msg = null;
+                }
+            }
+
+            return res;
+        }
+
+        public static void add_chat_names(String chat_id, ref Dictionary<Int64,String> names, String token)
+        {
+            XmlDocument data = new XmlDocument();
+            string for_names = "";
+            data = VkAPI_Perform("messages.getChat", token, chat_id);
+            
+            foreach(XmlNode n in data.SelectNodes("/response/users/uid"))
+            {
+                for_names += n.InnerText + ",";
+
+            }
+
+            for_names.Remove(for_names.Length - 1);
+
+            XmlDocument name_list = VkAPI_Perform("users.get", token, for_names);
+
+            foreach (XmlNode n in name_list.SelectNodes("/response/user"))
+            {
+                Int64 uid = Convert.ToInt64(n.SelectSingleNode("uid").InnerText);
+                if (!names.ContainsKey(uid))
+                {
+                    names.Add(uid, n.SelectSingleNode("first_name").InnerText + " " + n.SelectSingleNode("last_name").InnerText);
+                }
+            }
+           
+        }
+        
     }
 }
