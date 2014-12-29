@@ -255,3 +255,75 @@
    в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
    в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
    в Awesomium.Core.JavascriptHelper.Register()
+[1229/210649:INFO:(0)] WebCore is now online.
+[1229/210649:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/212508:INFO:(0)] WebCore is now online.
+[1229/212508:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/212516:WARNING:Awesomium.NET(0)] System.ArgumentException: The specified name (internal), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+   в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
+   в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
+   в Awesomium.Core.JavascriptHelper.Register()
+[1229/212906:INFO:(0)] WebCore is now online.
+[1229/212906:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/213458:INFO:(0)] WebCore is now online.
+[1229/213458:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/213513:WARNING:Awesomium.NET(0)] System.ArgumentException: The specified name (internal), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+   в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
+   в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
+   в Awesomium.Core.JavascriptHelper.Register()
+[1229/214431:INFO:(0)] WebCore is now online.
+[1229/214431:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/214643:INFO:(0)] WebCore is now online.
+[1229/214643:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/214809:INFO:(0)] WebCore is now online.
+[1229/214809:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/214946:INFO:(0)] WebCore is now online.
+[1229/214946:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215044:INFO:(0)] WebCore is now online.
+[1229/215044:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215120:INFO:(0)] WebCore is now online.
+[1229/215120:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215421:INFO:(0)] WebCore is now online.
+[1229/215421:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215624:INFO:(0)] WebCore is now online.
+[1229/215624:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215701:INFO:(0)] WebCore is now online.
+[1229/215701:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215729:INFO:(0)] WebCore is now online.
+[1229/215729:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215839:INFO:(0)] WebCore is now online.
+[1229/215839:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/215933:INFO:(0)] WebCore is now online.
+[1229/215933:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220156:INFO:(0)] WebCore is now online.
+[1229/220156:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220401:INFO:(0)] WebCore is now online.
+[1229/220401:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220429:INFO:(0)] WebCore is now online.
+[1229/220429:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220523:INFO:(0)] WebCore is now online.
+[1229/220523:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220631:INFO:(0)] WebCore is now online.
+[1229/220631:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/220858:INFO:(0)] WebCore is now online.
+[1229/220858:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/221053:INFO:(0)] WebCore is now online.
+[1229/221053:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/221324:INFO:(0)] WebCore is now online.
+[1229/221324:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/221340:WARNING:Awesomium.NET(0)] System.ArgumentException: The specified name (internal), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+   в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
+   в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
+   в Awesomium.Core.JavascriptHelper.Register()
+[1229/221808:INFO:(0)] WebCore is now online.
+[1229/221808:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/222432:INFO:(0)] WebCore is now online.
+[1229/222432:INFO:(0)] Running Awesomium 1.7.5.0
+[1229/222449:WARNING:Awesomium.NET(0)] System.ArgumentException: The specified name (internal), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+   в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
+   в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
+   в Awesomium.Core.JavascriptHelper.Register()

@@ -364,10 +364,36 @@ namespace new_svkm
 
                 item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
                 item.Uid = msg.user_id.ToString();
+                item.Tag = msg.attachments;
 
                 message_list.Items.Add(item);
 
                 item = null;
+            }
+        }
+
+        private void message_list_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Right)
+            {
+                ListBoxItem it = (ListBoxItem)message_list.SelectedItem;
+
+                if (it.Tag != null)
+                {
+                    MessageBox.Show("rdsg");
+                    List<VkAttachment> attachments = (List<VkAttachment>)it.Tag;
+                    it = null;
+
+                    foreach (VkAttachment n in attachments)
+                    {
+                        if (n.type == "photo")
+                            MessageBox.Show(n.source);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("none");
+                }
             }
         }
 

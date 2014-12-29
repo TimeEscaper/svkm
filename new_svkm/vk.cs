@@ -30,8 +30,8 @@ namespace new_svkm
 
          public void FromXml(XmlNode n)
          {
-  
-                    
+
+
                  if (n.SelectSingleNode("out").InnerText == "0")
                  {
                      IsOut = false;
@@ -54,7 +54,7 @@ namespace new_svkm
                  else
                  {
                      is_chat = false;
-                  
+                    
                  }
 
                  body = n.SelectSingleNode("body").InnerText;
@@ -65,8 +65,10 @@ namespace new_svkm
                  else
                      is_read = false;
 
-                if(n.SelectSingleNode("attachments") != null)
+
+                if (n.SelectNodes("/attachments/attachment") != null)
                 {
+                    attachments = new List<VkAttachment>();
                     
                     foreach(XmlNode attach in n.SelectNodes("/attachments/attachment"))
                     {
@@ -81,6 +83,7 @@ namespace new_svkm
                                     attach_struct.id = n.SelectSingleNode("/photo/pid").InnerText;
                                     attach_struct.source = n.SelectSingleNode("/photo/src_big").InnerText;
                                     attachments.Add(attach_struct);
+                                    MessageBox.Show(type);
                                     break;
                                 }
 
@@ -223,8 +226,7 @@ namespace new_svkm
             List<VkMessage> res = new List<VkMessage>();
             XmlDocument dialog = new XmlDocument();
             dialog.Load("https://api.vk.com/method/messages.getHistory.xml?user_id=" + friend_id + "&count=" + count.ToString() + "&access_token=" + token);
-
-
+            
             if(dialog.SelectNodes("/response/message").Count != 0)
             {
                 foreach(XmlNode n in dialog.SelectNodes("/response/message"))
@@ -244,7 +246,7 @@ namespace new_svkm
             List<VkMessage> res = new List<VkMessage>();
             XmlDocument dialog = new XmlDocument();
             dialog.Load("https://api.vk.com/method/messages.getHistory.xml?chat_id=" + chat_id + "&count=" + count.ToString() + "&access_token=" + token);
-
+            
             
 
             if(dialog.SelectNodes("/response/message").Count != 0)
