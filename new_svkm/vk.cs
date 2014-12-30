@@ -66,32 +66,32 @@ namespace new_svkm
                      is_read = false;
 
 
-                if (n.SelectNodes("/attachments/attachment") != null)
+                if (n.SelectSingleNode("attachment") != null)
                 {
                     attachments = new List<VkAttachment>();
-                    
-                    foreach(XmlNode attach in n.SelectNodes("/attachments/attachment"))
+
+                    foreach (XmlNode attach in n.SelectNodes("./attachments/attachment"))
                     {
                         VkAttachment attach_struct = new VkAttachment();
-                        string type = n.SelectSingleNode("type").InnerText;
-                      
+                        string type = attach.SelectSingleNode("type").InnerText;
+                       
                         switch(type)
                         {
                             case "photo":
                                 {
                                     attach_struct.type = type;
-                                    attach_struct.id = n.SelectSingleNode("/photo/pid").InnerText;
-                                    attach_struct.source = n.SelectSingleNode("/photo/src_big").InnerText;
+                                    attach_struct.id = attach.SelectSingleNode("./photo/pid").InnerText;
+                                    attach_struct.source = attach.SelectSingleNode("./photo/src_big").InnerText;
                                     attachments.Add(attach_struct);
-                                    MessageBox.Show(type);
+   
                                     break;
                                 }
 
                             case "wall":
                                 {
                                     attach_struct.type = type;
-                                    attach_struct.id = n.SelectSingleNode("/wall/id").InnerText;
-                                    attach_struct.owner_id = n.SelectSingleNode("/wall/owner_id").InnerText;
+                                    attach_struct.id = attach.SelectSingleNode("./wall/id").InnerText;
+                                    //attach_struct.owner_id = attach.SelectSingleNode("./wall/owner_id").InnerText;
                                     attachments.Add(attach_struct);
 
                                     break;

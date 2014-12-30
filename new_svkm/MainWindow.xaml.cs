@@ -36,6 +36,10 @@ namespace new_svkm
 
         Dictionary<Int64, String> names;
 
+        ContextMenu msg_context;
+        
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +51,19 @@ namespace new_svkm
             if (!Directory.Exists(data_path))
                 Directory.CreateDirectory(data_path);
 
-      
+            msg_context = new ContextMenu();
+
+            MenuItem contextmenu_photo = new MenuItem();
+            contextmenu_photo.Header = "Фотографии";
+            contextmenu_photo.Click += contextmenu_photo_Click;
+          
+            MenuItem contextmenu_wall = new MenuItem();
+            contextmenu_wall.Header = "Запись со стены";
+
+            msg_context.Items.Add(contextmenu_photo);
+            msg_context.Items.Add(contextmenu_wall);
+
+            message_list.ContextMenu = msg_context;
 
         }
 
@@ -346,6 +362,7 @@ namespace new_svkm
 
                 item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
                 item.Uid = msg.user_id.ToString();
+                item.Tag = msg.attachments;
 
                 message_list.Items.Add(item);
 
@@ -365,23 +382,22 @@ namespace new_svkm
                 item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
                 item.Uid = msg.user_id.ToString();
                 item.Tag = msg.attachments;
-
                 message_list.Items.Add(item);
 
                 item = null;
             }
         }
 
-        private void message_list_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+       /* private void message_list_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if(e.ChangedButton == MouseButton.Right)
             {
                 ListBoxItem it = (ListBoxItem)message_list.SelectedItem;
-
-                if (it.Tag != null)
+               
+               /* if (it.Tag != null)
                 {
-                    MessageBox.Show("rdsg");
                     List<VkAttachment> attachments = (List<VkAttachment>)it.Tag;
+                    MessageBox.Show(attachments.Count.ToString());
                     it = null;
 
                     foreach (VkAttachment n in attachments)
@@ -394,9 +410,33 @@ namespace new_svkm
                 {
                     MessageBox.Show("none");
                 }
+
+                
             }
+        }*/
+
+        private void contextmenu_photo_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem it = (ListBoxItem)message_list.SelectedItem;
+
+            if (it.Tag != null)
+            {
+                List<VkAttachment> attachments = (List<VkAttachment>)it.Tag;
+                it = null;
+                Media.Show_Photo(attachments, cache_path);
+            }
+            else
+            {
+                it = null;
+                MessageBox.Show("Сообщение не содержит фото!");
+            }
+            
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Directory.Delete(cache_path, true);
+        }
        
     }
 }

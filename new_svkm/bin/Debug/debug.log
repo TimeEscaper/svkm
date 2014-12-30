@@ -327,3 +327,121 @@
    в Awesomium.Windows.Controls.WebControl.CreateGlobalJavascriptObject(String name)
    в Awesomium.Core.JavascriptHelper.aOoUAHTJcFRVt9SaaYb(Object , Object )
    в Awesomium.Core.JavascriptHelper.Register()
+[1230/190949:INFO:(0)] WebCore is now online.
+[1230/190949:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/190950:WARNING:(0)] The specified name (external), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+[1230/191059:INFO:(0)] WebCore is now online.
+[1230/191059:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191250:INFO:(0)] WebCore is now online.
+[1230/191250:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191345:INFO:(0)] WebCore is now online.
+[1230/191345:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191522:INFO:(0)] WebCore is now online.
+[1230/191522:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191633:INFO:(0)] WebCore is now online.
+[1230/191633:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191729:INFO:(0)] WebCore is now online.
+[1230/191729:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191806:INFO:(0)] WebCore is now online.
+[1230/191806:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191904:INFO:(0)] WebCore is now online.
+[1230/191904:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/191925:INFO:(0)] WebCore is now online.
+[1230/191925:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192002:INFO:(0)] WebCore is now online.
+[1230/192002:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192130:INFO:(0)] WebCore is now online.
+[1230/192130:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192238:INFO:(0)] WebCore is now online.
+[1230/192238:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192301:INFO:(0)] WebCore is now online.
+[1230/192301:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192451:INFO:(0)] WebCore is now online.
+[1230/192451:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192517:INFO:(0)] WebCore is now online.
+[1230/192517:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192546:INFO:(0)] WebCore is now online.
+[1230/192546:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/192836:INFO:(0)] WebCore is now online.
+[1230/192836:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/193241:INFO:(0)] WebCore is now online.
+[1230/193241:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/195615:INFO:(0)] WebCore is now online.
+[1230/195615:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/195657:INFO:(0)] WebCore is now online.
+[1230/195657:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/195731:INFO:(0)] WebCore is now online.
+[1230/195731:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/195828:INFO:(0)] WebCore is now online.
+[1230/195828:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/195845:INFO:(0)] WebCore is now online.
+[1230/195845:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200001:INFO:(0)] WebCore is now online.
+[1230/200001:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200018:INFO:(0)] WebCore is now online.
+[1230/200018:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200043:INFO:(0)] WebCore is now online.
+[1230/200043:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200152:INFO:(0)] WebCore is now online.
+[1230/200152:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200255:INFO:(0)] WebCore is now online.
+[1230/200255:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200352:INFO:(0)] WebCore is now online.
+[1230/200352:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200417:INFO:(0)] WebCore is now online.
+[1230/200417:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/200438:INFO:(0)] WebCore is now online.
+[1230/200438:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/212706:INFO:(0)] WebCore is now online.
+[1230/212706:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/212707:WARNING:(0)] The specified name (external), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+[1230/212802:INFO:(0)] WebCore is now online.
+[1230/212802:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/212930:INFO:(0)] WebCore is now online.
+[1230/212930:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213001:INFO:(0)] WebCore is now online.
+[1230/213001:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213021:INFO:(0)] WebCore is now online.
+[1230/213021:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213205:INFO:(0)] WebCore is now online.
+[1230/213205:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213226:INFO:(0)] WebCore is now online.
+[1230/213226:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213257:INFO:(0)] WebCore is now online.
+[1230/213257:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213321:INFO:(0)] WebCore is now online.
+[1230/213321:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213344:INFO:(0)] WebCore is now online.
+[1230/213344:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213418:INFO:(0)] WebCore is now online.
+[1230/213418:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213427:INFO:(0)] WebCore is now online.
+[1230/213427:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/213543:INFO:(0)] WebCore is now online.
+[1230/213543:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/215035:INFO:(0)] WebCore is now online.
+[1230/215035:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/215824:INFO:(0)] WebCore is now online.
+[1230/215824:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/223701:INFO:(0)] WebCore is now online.
+[1230/223701:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/223729:INFO:(0)] WebCore is now online.
+[1230/223729:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/223755:INFO:(0)] WebCore is now online.
+[1230/223755:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224027:INFO:(0)] WebCore is now online.
+[1230/224027:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224059:INFO:(0)] WebCore is now online.
+[1230/224059:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224129:INFO:(0)] WebCore is now online.
+[1230/224129:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224338:INFO:(0)] WebCore is now online.
+[1230/224338:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224456:INFO:(0)] WebCore is now online.
+[1230/224456:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224546:INFO:(0)] WebCore is now online.
+[1230/224546:INFO:(0)] Running Awesomium 1.7.4.2
+[1230/224809:INFO:(0)] WebCore is now online.
+[1230/224809:INFO:(0)] Running Awesomium 1.7.4.2
