@@ -55,18 +55,35 @@ namespace new_svkm
             WebClient downloader = new WebClient();
             Photo_Window_Init();
             photos = new List<String>();
-            
+
+            int i = 0;
           
             foreach(VkAttachment item in sources)
             {
-                string cur_photo = cache_path + "\\" + item.id;
-                if(!File.Exists(cur_photo))
-                    downloader.DownloadFile(new Uri(item.source), cur_photo);
-                photos.Add(cur_photo);
-            }
 
-            counter = 0;
-            PictureBox.Source = new BitmapImage(new Uri(photos[counter]));
+                if (item.type == "photo")
+                {
+                    string cur_photo = cache_path + "\\" + item.id;
+                    if (!File.Exists(cur_photo))
+                        downloader.DownloadFile(new Uri(item.source), cur_photo);
+                    photos.Add(cur_photo);
+
+                    i++;
+                }
+
+            }
+            if (i == 0)
+                MessageBox.Show("Сообщение не содержит фото!");
+            else
+            {
+                counter = 0;
+                PictureBox.Source = new BitmapImage(new Uri(photos[counter]));
+            }
+        }
+
+        public static void Show_WallRepost(List<VkAttachment> source)
+        {
+
         }
     }
 }

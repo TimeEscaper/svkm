@@ -59,6 +59,7 @@ namespace new_svkm
           
             MenuItem contextmenu_wall = new MenuItem();
             contextmenu_wall.Header = "Запись со стены";
+            contextmenu_wall.Click += contextmenu_photo_Click;
 
             msg_context.Items.Add(contextmenu_photo);
             msg_context.Items.Add(contextmenu_wall);
@@ -380,8 +381,14 @@ namespace new_svkm
                 ListBoxItem item = new ListBoxItem();
 
                 item.Content = names[msg.user_id] + "\n" + msg.body + "\n";
+                item.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
                 item.Uid = msg.user_id.ToString();
-                item.Tag = msg.attachments;
+                if (msg.attachments != null)
+                {
+                    //string temp = item.Content.ToString();
+                    //item.Content = temp + "\nВложения";
+                    item.Tag = msg.attachments;
+                }
                 message_list.Items.Add(item);
 
                 item = null;
@@ -428,14 +435,31 @@ namespace new_svkm
             else
             {
                 it = null;
-                MessageBox.Show("Сообщение не содержит фото!");
+                MessageBox.Show("Сообщение не содержит вложений!");
             }
             
         }
 
+        private void contextmenu_photo_Wall(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem it = (ListBoxItem)message_list.SelectedItem;
+
+            if (it.Tag != null)
+            {
+                List<VkAttachment> attachments = (List<VkAttachment>)it.Tag;
+                it = null;
+                Media.Show_Photo(attachments, cache_path);
+            }
+            else
+            {
+                it = null;
+                MessageBox.Show("Сообщение не содержит вложений!");
+            }
+        }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Directory.Delete(cache_path, true);
+            //Directory.Delete(cache_path, true);
         }
        
     }

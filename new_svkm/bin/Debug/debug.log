@@ -445,3 +445,17 @@
 [1230/224546:INFO:(0)] Running Awesomium 1.7.4.2
 [1230/224809:INFO:(0)] WebCore is now online.
 [1230/224809:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/203908:INFO:(0)] WebCore is now online.
+[1231/203908:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/203910:WARNING:(0)] The specified name (external), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Имя параметра: name
+[1231/204327:INFO:(0)] WebCore is now online.
+[1231/204327:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/204431:INFO:(0)] WebCore is now online.
+[1231/204431:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/204612:INFO:(0)] WebCore is now online.
+[1231/204612:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/204723:INFO:(0)] WebCore is now online.
+[1231/204723:INFO:(0)] Running Awesomium 1.7.4.2
+[1231/204908:INFO:(0)] WebCore is now online.
+[1231/204908:INFO:(0)] Running Awesomium 1.7.4.2

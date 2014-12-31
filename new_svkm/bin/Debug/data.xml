@@ -2,6 +2,24 @@
 <response list="true">
   <count>146</count>
   <message>
+    <mid>55609</mid>
+    <date>1420025689</date>
+    <out>1</out>
+    <uid>88741046</uid>
+    <read_state>1</read_state>
+    <title> ... </title>
+    <body>Попробуй лучше антигейт, там вроде больше дают</body>
+  </message>
+  <message>
+    <mid>55607</mid>
+    <date>1420024960</date>
+    <out>1</out>
+    <uid>46898364</uid>
+    <read_state>0</read_state>
+    <title> ... </title>
+    <body>А так у меня все нормально, у тебя как дела?)</body>
+  </message>
+  <message>
     <mid>55600</mid>
     <date>1419955531</date>
     <out>0</out>
@@ -54,10 +72,10 @@
           <pid>344807840</pid>
           <aid>-15</aid>
           <owner_id>184265018</owner_id>
-          <src>http://cs621527.vk.me/v621527233/815/77Dgn-DAQmk.jpg</src>
-          <src_big>http://cs621527.vk.me/v621527233/816/mwn7MYIGIOM.jpg</src_big>
-          <src_small>http://cs621527.vk.me/v621527233/814/0cKsSvKQTVk.jpg</src_small>
-          <src_xbig>http://cs621527.vk.me/v621527233/817/l3aaVxaXhCs.jpg</src_xbig>
+          <src>http://cs540103.vk.me/c621527/v621527233/815/77Dgn-DAQmk.jpg</src>
+          <src_big>http://cs540103.vk.me/c621527/v621527233/816/mwn7MYIGIOM.jpg</src_big>
+          <src_small>http://cs540103.vk.me/c621527/v621527233/814/0cKsSvKQTVk.jpg</src_small>
+          <src_xbig>http://cs540103.vk.me/c621527/v621527233/817/l3aaVxaXhCs.jpg</src_xbig>
           <width>640</width>
           <height>480</height>
           <text />
@@ -85,14 +103,14 @@
   </message>
   <message>
     <mid>55599</mid>
-    <date>1419930878</date>
+    <date>1419930876</date>
     <out>0</out>
     <uid>88298867</uid>
     <read_state>1</read_state>
     <title>али ракал</title>
     <body>Костя Горпынченко покинул беседу</body>
     <chat_id>24</chat_id>
-    <chat_active>21785564,72510586,88741046,95974762,13321860,170995020,53199791,26979663,208984149,34610946,138701770,116266141</chat_active>
+    <chat_active>170995020,44898863,21785564,58597203,106537964,72510586</chat_active>
     <push_settings>
       <sound>1</sound>
       <disabled_until>3517</disabled_until>
@@ -105,7 +123,7 @@
   </message>
   <message>
     <mid>55598</mid>
-    <date>1419917662</date>
+    <date>1419917660</date>
     <out>0</out>
     <uid>33465151</uid>
     <read_state>1</read_state>
@@ -140,7 +158,7 @@
     <body>😅</body>
     <emoji>1</emoji>
     <chat_id>27</chat_id>
-    <chat_active>32276101,21036603,51440588,33465151,82811110,25017668</chat_active>
+    <chat_active>33465151,18190343,51440588,82811110,25017668,32276101</chat_active>
     <push_settings>
       <sound>1</sound>
       <disabled_until>22</disabled_until>
@@ -295,15 +313,6 @@
     <read_state>1</read_state>
     <title> ... </title>
     <body>Все, я посмотрел</body>
-  </message>
-  <message>
-    <mid>55046</mid>
-    <date>1419014743</date>
-    <out>1</out>
-    <uid>88741046</uid>
-    <read_state>1</read_state>
-    <title> ... </title>
-    <body>Передай Жене если он рядом, что он сегодня убирается</body>
   </message>
   <message>
     <mid>55044</mid>
@@ -575,9 +584,9 @@
     </push_settings>
     <users_count>4</users_count>
     <admin_id>116266141</admin_id>
-    <photo_50>http://cs540103.vk.me/c622125/v622125141/8a48/eJ1uF2c6jHs.jpg</photo_50>
-    <photo_100>http://cs540103.vk.me/c622125/v622125141/8a47/wVBm8mpt7FA.jpg</photo_100>
-    <photo_200>http://cs540103.vk.me/c622125/v622125141/8a46/pw8B8fYF2PM.jpg</photo_200>
+    <photo_50>http://cs622125.vk.me/v622125141/8a48/eJ1uF2c6jHs.jpg</photo_50>
+    <photo_100>http://cs622125.vk.me/v622125141/8a47/wVBm8mpt7FA.jpg</photo_100>
+    <photo_200>http://cs622125.vk.me/v622125141/8a46/pw8B8fYF2PM.jpg</photo_200>
   </message>
   <message>
     <mid>54639</mid>
@@ -754,7 +763,7 @@
         <artist>Радужный Тыл из Ада </artist>
         <title>Он ебет Сварочную Машину</title>
         <duration>246</duration>
-        <url>http://cs521403.vk.me/u178082194/audios/8b4dd3d2a871.mp3?extra=iUvHaOKAEaPGKe3SaGwk-go28XzQnLWMObeXLlgieTUpjdiYpGbXpJWfeF8eC7itryS3H91v-ND4ALze-4oC8eVUNjJ8-GfU</url>
+        <url>http://cs521403.vk.me/u178082194/audios/3e300a1e5fd3.mp3?extra=1sB9VH0wpWmSDHSDqE5aBd_6ZwVrg-rOmQPxywq54mfM68PxzcwgNl-QJEIHEPOSHw6LI7VE5tBh8GCeg37idLycEExBIp0</url>
         <performer>Радужный Тыл из Ада </performer>
       </audio>
     </attachment>
@@ -767,7 +776,7 @@
           <artist>Радужный Тыл из Ада </artist>
           <title>Он ебет Сварочную Машину</title>
           <duration>246</duration>
-          <url>http://cs521403.vk.me/u178082194/audios/8b4dd3d2a871.mp3?extra=iUvHaOKAEaPGKe3SaGwk-go28XzQnLWMObeXLlgieTUpjdiYpGbXpJWfeF8eC7itryS3H91v-ND4ALze-4oC8eVUNjJ8-GfU</url>
+          <url>http://cs521403.vk.me/u178082194/audios/3e300a1e5fd3.mp3?extra=1sB9VH0wpWmSDHSDqE5aBd_6ZwVrg-rOmQPxywq54mfM68PxzcwgNl-QJEIHEPOSHw6LI7VE5tBh8GCeg37idLycEExBIp0</url>
           <performer>Радужный Тыл из Ада </performer>
         </audio>
       </attachment>
@@ -836,7 +845,7 @@
     <title>Фильмец</title>
     <body>Марк Северин покинул беседу</body>
     <chat_id>34</chat_id>
-    <chat_active>32276101,169357888,46898364,170068634,106823096</chat_active>
+    <chat_active>169357888,46898364,32276101,170068634,106823096</chat_active>
     <push_settings>
       <sound>1</sound>
       <disabled_until>0</disabled_until>
@@ -1007,15 +1016,6 @@
     <title> ... </title>
     <body>Рады Вам) 😎 ✌</body>
     <emoji>1</emoji>
-  </message>
-  <message>
-    <mid>47850</mid>
-    <date>1409340248</date>
-    <out>0</out>
-    <uid>46898364</uid>
-    <read_state>1</read_state>
-    <title> ... </title>
-    <body>Ну, все еще будет:)</body>
   </message>
   <message>
     <mid>47505</mid>
@@ -1379,7 +1379,7 @@
     <title>Cansat</title>
     <body>спасибо, сейчас ему напишу</body>
     <chat_id>1</chat_id>
-    <chat_active>79495135,6256031,177101949,20667725,75332891,31689715</chat_active>
+    <chat_active>75332891,79495135,6256031,31689715,78384254,177101949</chat_active>
     <users_count>9</users_count>
     <admin_id>75332891</admin_id>
   </message>
@@ -1490,7 +1490,7 @@
       </attachment>
     </attachments>
     <chat_id>28</chat_id>
-    <chat_active>208984149,53199791,44898863,72510586,13321860,88741046</chat_active>
+    <chat_active>44898863,72510586,208984149,13321860,88741046,93891683</chat_active>
     <users_count>9</users_count>
     <admin_id>44898863</admin_id>
     <photo_50>http://cs409919.vk.me/v409919683/8654/oM6Kr4tTxII.jpg</photo_50>
@@ -1557,7 +1557,7 @@
     <title>Пейнтбол</title>
     <body>Тридцать кусков не смог спилить</body>
     <chat_id>25</chat_id>
-    <chat_active>39235242,32276101,159110912,106823096,46898364,180088950</chat_active>
+    <chat_active>159110912,39235242,33465151,106823096,32276101,46898364</chat_active>
     <users_count>9</users_count>
     <admin_id>159110912</admin_id>
   </message>
@@ -1753,7 +1753,7 @@
     <title>Материмся на здоровье</title>
     <body>на химию сможешь придти ?</body>
     <chat_id>23</chat_id>
-    <chat_active>21036603,25017668,30285300,42925560,45644060,46898364</chat_active>
+    <chat_active>30285300,21036603,25017668,42925560,45644060,46898364</chat_active>
     <users_count>11</users_count>
     <admin_id>39235242</admin_id>
   </message>
@@ -1803,7 +1803,7 @@
     <title>Говорим быстрее, кто едет на выпускной, а кто - нет.</title>
     <body>Пытаюсь вот</body>
     <chat_id>10</chat_id>
-    <chat_active>39235242,21036603,42925560,45644060,46898364,68940912</chat_active>
+    <chat_active>39235242,42925560,45644060,46898364,68940912,106823096</chat_active>
     <users_count>10</users_count>
     <admin_id>39235242</admin_id>
   </message>
@@ -2759,7 +2759,7 @@
     <title>Адель, Ильдар, Марат</title>
     <body>А что это?))</body>
     <chat_id>6</chat_id>
-    <chat_active>177101949,24813164,30285300,45644060</chat_active>
+    <chat_active>30285300,24813164,45644060,177101949</chat_active>
     <users_count>5</users_count>
     <admin_id>184265018</admin_id>
   </message>
